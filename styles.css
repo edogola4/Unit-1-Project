@@ -630,7 +630,7 @@ textarea.contact-input {
   #BLOG
 \*-----------------------------------*/
 
-.blog {
+/*.blog {
   padding-block-end: 120px;
 }
 
@@ -688,7 +688,92 @@ textarea.contact-input {
 
 .blog-card .card-title a:is(:hover, :focus) {
   color: var(--orange-soda);
+}*/
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
+
+.blog {
+  padding-block-end: 120px;
 }
+
+.blog .section-title {
+  margin-block-end: 20px;
+}
+
+.blog .section-text {
+  margin-block-end: 80px;
+}
+
+.blog-list {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+}
+
+.blog-card {
+  font-family: var(--ff-barlow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--independence);
+  border-radius: var(--radius-15);
+  overflow: hidden;
+  min-height: 400px; /* Ensure all cards have the same height */
+}
+
+.blog-card .card-banner {
+  border-radius: var(--radius-15);
+  overflow: hidden;
+  margin-block-end: 20px;
+  flex-shrink: 0;
+}
+
+.blog-card .card-banner img {
+  width: 100%;
+  height: auto;
+  transition: var(--transition-2);
+}
+
+.blog-card .card-banner a:is(:hover, :focus) img {
+  transform: scale(1.1);
+}
+
+.blog-card .card-banner:focus-within {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+}
+
+.blog-card .card-tag {
+  color: var(--orange-soda);
+  margin-block-end: 5px;
+  flex-shrink: 0;
+}
+
+.blog-card .card-title {
+  color: var(--white);
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+  flex-grow: 1; /* Makes title take up remaining space */
+}
+
+.blog-card .card-title a {
+  transition: var(--transition-2);
+}
+
+.blog-card .card-title a:is(:hover, :focus) {
+  color: var(--orange-soda);
+}
+
+/* Adjust text spacing for uniformity */
+.blog-card .card-content {
+  margin-block-end: 20px;
+  flex-grow: 1; /* Makes content fill up remaining space in the card */
+}
+
+
 
 /*-----------------------------------*\
   #FOOTER
